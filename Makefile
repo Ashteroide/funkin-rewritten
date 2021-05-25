@@ -1,24 +1,25 @@
 lovefile:
-	@rm -rf build/lovefile
-	@mkdir -p build/lovefile
-	
-	@cd src/love; zip -r ../../build/lovefile/funkin-rewritten.love .
-	@zip -0 build/lovefile/funkin-rewritten.love LICENSE
+
+	rm -rf build/lovefile
+	mkdir -p build/lovefile	
+
+	cd src/love; zip -r ../../build/lovefile/funkin-rewritten.love .
+	zip -0 build/lovefile/funkin-rewritten.love LICENSE
 
 win64: lovefile
-	@rm -rf build/win64
-	@mkdir -p build/win64
+
+	rm -rf build/win64
+	mkdir -p build/win64
 	
-	@cp dependencies/win64/love/OpenAL32.dll build/win64
-	@cp dependencies/win64/love/SDL2.dll build/win64
-	@cp dependencies/win64/love/license.txt build/win64
-	@cp dependencies/win64/love/lua51.dll build/win64
-	@cp dependencies/win64/love/mpg123.dll build/win64
-	@cp dependencies/win64/love/love.dll build/win64
-	@cp dependencies/win64/love/msvcp120.dll build/win64
-	@cp dependencies/win64/love/msvcr120.dll build/win64
-	
-	@cat dependencies/win64/love/love.exe build/lovefile/funkin-rewritten.love > build/win64/funkin-rewritten.exe
+	cp dependencies/win64/love/OpenAL32.dll build/win64
+	cp dependencies/win64/love/SDL2.dll build/win64
+	cp dependencies/win64/love/license.txt build/win64
+	cp dependencies/win64/love/lua51.dll build/win64
+	cp dependencies/win64/love/mpg123.dll build/win64
+	cp dependencies/win64/love/love.dll build/win64
+	cp dependencies/win64/love/msvcp120.dll build/win64
+	cp dependencies/win64/love/msvcr120.dll build/win64
+	cat dependencies/win64/love/love.exe build/lovefile/funkin-rewritten.love > build/win64/funkin-rewritten.exe
 
 macos: lovefile
 	@rm -rf build/macos

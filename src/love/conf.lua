@@ -7,6 +7,6 @@ function love.conf(t)
 	t.version = "11.3"
 	--t.console = true
 	
-	t.window.title = "Friday Night Funkin' Rewritten"
+	t.window.title = "Friday Night Funkin'"
 	t.window.icon = "images/icon.png"
 end

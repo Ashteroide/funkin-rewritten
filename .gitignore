@@ -15,3 +15,9 @@ tools/funkin-xml/*
 
 !tools/funkin-json/funkin-json.py
 !tools/funkin-xml/funkin-xml.py
+
+# Alias'
+love.exe.lnk
+
+# Folders
+.vs/*

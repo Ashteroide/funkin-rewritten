@@ -28,14 +28,14 @@ weeks[1] = {
 		weeks.load()
 		
 		if songNum == 3 then
-			inst = love.audio.newSource("music/Dadbattle_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Dadbattle_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 1/Dadbattle_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 1/Dadbattle_Voices.ogg", "stream")
 		elseif songNum == 2 then
-			inst = love.audio.newSource("music/Fresh_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Fresh_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 1/Fresh_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 1/Fresh_Voices.ogg", "stream")
 		else
-			inst = love.audio.newSource("music/Bopeebo_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Bopeebo_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 1/Bopeebo_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 1/Bopeebo_Voices.ogg", "stream")
 		end
 		
 		weeks[1].initUI()
@@ -48,11 +48,11 @@ weeks[1] = {
 		weeks.initUI()
 		
 		if songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/fresh" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 1/Fresh/fresh" .. songAppend .. ".lua")())
 		elseif songNum == 3 then
-			weeks.generateNotes(love.filesystem.load("charts/dadbattle" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 1/Dadbattle/dadbattle" .. songAppend .. ".lua")())
 		else
-			weeks.generateNotes(love.filesystem.load("charts/bopeebo" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 1/Bopeebo/bopeebo" .. songAppend .. ".lua")())
 		end
 	end,
 	

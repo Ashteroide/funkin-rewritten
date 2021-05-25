@@ -47,9 +47,9 @@ weeks[2] = {
 		weeks.initUI()
 		
 		if songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/south" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 2/south" .. songAppend .. ".lua")())
 		else
-			weeks.generateNotes(love.filesystem.load("charts/spookeez" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 2/spookeez" .. songAppend .. ".lua")())
 		end
 	end,
 	

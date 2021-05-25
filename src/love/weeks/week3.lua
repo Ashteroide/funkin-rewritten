@@ -65,11 +65,11 @@ weeks[3] = {
 		weeks.initUI()
 		
 		if songNum == 3 then
-			weeks.generateNotes(love.filesystem.load("charts/blammed" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 3/blammed" .. songAppend .. ".lua")())
 		elseif songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/philly" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 3/philly" .. songAppend .. ".lua")())
 		else
-			weeks.generateNotes(love.filesystem.load("charts/pico" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 3/pico" .. songAppend .. ".lua")())
 		end
 	end,
 	

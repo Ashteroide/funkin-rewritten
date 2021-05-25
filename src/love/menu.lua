@@ -2,10 +2,12 @@
 This file is part of Friday Night Funkin' Rewritten by HTV04
 ------------------------------------------------------------------------------]]
 
-menu = {
+menu =
+{
 	init = function()
 		menuState = 0
-		weekSongs = {
+		weekSongs =
+		{
 			{
 				"Tutorial"
 			},
@@ -22,9 +24,16 @@ menu = {
 				"Pico",
 				"Philly Nice",
 				"Blammed"
+			},
+			{
+				"Headache",
+				"Nerves",
+				"Release",
+				"Fading"
 			}
 		}
-		difficultyStrs = {
+		difficultyStrs =
+		{
 			"-easy",
 			"",
 			"-hard"
@@ -59,7 +68,7 @@ menu = {
 					weekNum = weekNum - 1
 					
 					if weekNum < 0 then
-						weekNum = 3
+						weekNum = 4 --[ Maxiumum week number ]
 					end
 				elseif menuState == 1 then
 					songNum = songNum - 1
@@ -80,7 +89,7 @@ menu = {
 				if menuState == 0 then
 					weekNum = weekNum + 1
 					
-					if weekNum > 3 then
+					if weekNum > 4 then --[ Maximum week number ]
 						weekNum = 0
 					end
 				elseif menuState == 1 then
@@ -151,14 +160,18 @@ menu = {
 			
 			girlfriendTitle:draw()
 			
-			love.graphics.printf("By HTV04\nv1.0.0 beta 2\n\nOriginal game by ninjamuffin99, PhantomArcade, kawaisprite, and evilsk8er, in association with Newgrounds", -525, 90, 450, "right", nil, 1, 1)
+			love.graphics.printf("By HTV04, Edited by Ashteroide\nv1.0.0 beta 2\n\nOriginal game by ninjamuffin99, PhantomArcade, kawaisprite, and evilsk8er, in association with Newgrounds", -525, 90, 450, "right", nil, 1, 1)
 			
 			graphics.setColor(1, 1, 0)
 			if menuState == 0 then
 				if weekNum == 0 then
 					love.graphics.printf("Choose a week: < Tutorial >", -640, 285, 853, "center", nil, 1.5, 1.5)
 				else
-					love.graphics.printf("Choose a week: < Week " .. weekNum .. " >", -640, 285, 853, "center", nil, 1.5, 1.5)
+					if weekNum == 4 then --[ vsGarcellos Custom Name ]
+						love.graphics.printf("Choose a week: < Smoke Em' Out >", -640, 285, 853, "center", nil, 1.5, 1.5)
+					else
+						love.graphics.printf("Choose a week: < Week " .. weekNum .. " >", -640, 285, 853, "center", nil, 1.5, 1.5)
+					end
 				end
 			elseif menuState == 1 then
 				if songNum == 0 then

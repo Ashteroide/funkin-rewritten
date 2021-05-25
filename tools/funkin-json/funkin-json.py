@@ -28,13 +28,13 @@ for i in range(1, len(sys.argv)):
             if k in j:
                 lua += '\t\t' + k + ' = ' + str(j[k]).lower() + ',\n'
         if len(j['sectionNotes']) > 0:
-            lua += '        sectionNotes = {\n'
+            lua += '        sectionNotes =\n\t\t{\n'
             for k in j['sectionNotes']:
-                lua += ('\t\t\t{\n'
-                        '\t\t\t\tnoteTime = ' + str(k[0]) + ',\n'
-                        '\t\t\t\tnoteType = ' + str(k[1]) + ',\n'
-                        '\t\t\t\tnoteLength = ' + str(k[2]) + '\n'
-                        '\t\t\t},\n')
+                lua += ('\t\t\t{ '
+                        'noteTime = ' + str(k[0]) + ', '
+                        'noteType = ' + str(k[1]) + ', '
+                        'noteLength = ' + str(k[2]) + ' '
+                        '},\n')
             lua = (lua[:len(lua) - 3] + '}\n'
                    '\t\t}\n')
         else:

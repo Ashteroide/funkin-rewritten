@@ -2,7 +2,8 @@
 This file is part of Friday Night Funkin' Rewritten by HTV04
 ------------------------------------------------------------------------------]]
 
-weeks[0] = {
+weeks[0] =
+{
 	init = function(songNum)
 		bpm = 100
 		
@@ -66,7 +67,7 @@ weeks[0] = {
 	initUI = function(songNum)
 		weeks.initUI()
 		
-		weeks.generateNotes(love.filesystem.load("charts/tutorial" .. songAppend .. ".lua")())
+		weeks.generateNotes(love.filesystem.load("charts/Tutorial/tutorial" .. songAppend .. ".lua")())
 	end,
 	
 	update = function(dt)
