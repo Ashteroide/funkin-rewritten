@@ -68,7 +68,7 @@ weeks[1] = {
 		weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")())
 	end,
 	
-	update = function(dt)
+	update = function(deltaTime)
 		if gameOver then
 			if not graphics.isFading then
 				if input:pressed("confirm") then
@@ -88,18 +88,18 @@ weeks[1] = {
 				end
 			end
 			
-			boyfriend:update(dt)
+			boyfriend:update(deltaTime)
 			
 			return
 		end
 		
-		weeks.update(dt)
+		weeks.update(deltaTime)
 		
 		if enemyFrameTimer >= 12 then
 			enemy:animate("idle", true)
 			enemyFrameTimer = 0
 		end
-		enemyFrameTimer = enemyFrameTimer + 24 * dt
+		enemyFrameTimer = enemyFrameTimer + 24 * deltaTime
 		
 		if songNum == 1 and musicThres ~= oldMusicThres and math.fmod(musicTime + 500, 480000 / bpm) < 100 then
 			boyfriend:animate("hey", false)
@@ -137,7 +137,7 @@ weeks[1] = {
 			weeks[1].load()
 		end
 		
-		weeks.updateUI(dt)
+		weeks.updateUI(deltaTime)
 	end,
 	
 	draw = function()

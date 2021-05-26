@@ -64,9 +64,9 @@ Sprite = Class {
 		
 		self:animate(anim, loopAnim)
 	end,
-	update = function(self, dt)
+	update = function(self, deltaTime)
 		if self.animated then
-			self.currentFrame = self.currentFrame + self.anim.speed * dt
+			self.currentFrame = self.currentFrame + self.anim.speed * deltaTime
 		end
 		
 		if self.animated and self.currentFrame > self.anim.stop then

@@ -57,8 +57,8 @@ menu =
 		music:play()
 	end,
 	
-	update = function(dt)
-		girlfriendTitle:update(dt)
+	update = function(deltaTime)
+		girlfriendTitle:update(deltaTime)
 		
 		if not graphics.isFading then
 			if input:pressed("left") then

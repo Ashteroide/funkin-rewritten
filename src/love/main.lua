@@ -145,18 +145,18 @@ function love.resize(width, height)
     lovesize.resize(width, height)
 end
 
-function love.update(dt)
-	dt = math.min(dt, 1 / 30)
+function love.update(deltaTime)
+	deltaTime = math.min(deltaTime, 1 / 30)
 	
 	input:update()
 	
 	if inMenu then
-		menu.update(dt)
+		menu.update(deltaTime)
 	elseif inGame then
-		weeks[weekNum].update(dt)
+		weeks[weekNum].update(deltaTime)
 	end
 	
-	Timer.update(dt)
+	Timer.update(deltaTime)
 end
 
 function love.draw()

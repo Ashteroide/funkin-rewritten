@@ -61,7 +61,7 @@ weeks[2] = {
 		end
 	end,
 	
-	update = function(dt)
+	update = function(deltaTime)
 		if gameOver then
 			if not graphics.isFading then
 				if input:pressed("confirm") then
@@ -81,14 +81,14 @@ weeks[2] = {
 				end
 			end
 			
-			boyfriend:update(dt)
+			boyfriend:update(deltaTime)
 			
 			return
 		end
 		
-		weeks.update(dt)
+		weeks.update(deltaTime)
 		
-		hauntedHouse:update(dt)
+		hauntedHouse:update(deltaTime)
 		
 		if not hauntedHouse.animated then
 			hauntedHouse:animate("normal", false)
@@ -108,7 +108,7 @@ weeks[2] = {
 			enemy:animate("idle", true)
 			enemyFrameTimer = 0
 		end
-		enemyFrameTimer = enemyFrameTimer + 24 * dt
+		enemyFrameTimer = enemyFrameTimer + 24 * deltaTime
 		
 		local enemyIcons =
 		{
@@ -140,7 +140,7 @@ weeks[2] = {
 			weeks[2].load()
 		end
 		
-		weeks.updateUI(dt)
+		weeks.updateUI(deltaTime)
 	end,
 	
 	draw = function()

@@ -74,7 +74,7 @@ weeks[4] =
 		weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")());
 	end,
 
-	update = function(dt)
+	update = function(deltaTime)
 		if gameOver then
 			if not graphics.isFading then
 				if input:pressed("confirm") then
@@ -94,19 +94,19 @@ weeks[4] =
 				end
 			end
 
-			boyfriend:update(dt)
+			boyfriend:update(deltaTime)
 
 			return
 		end
 
-		weeks.update(dt)
+		weeks.update(deltaTime)
 
 		if enemyFrameTimer >= 12 then
 			enemy:animate("idle", true)
 			enemyFrameTimer = 0
 		end
 		
-		enemyFrameTimer = enemyFrameTimer + 24 * dt
+		enemyFrameTimer = enemyFrameTimer + 24 * deltaTime
 
 		local enemyIcons =
 		{
@@ -143,7 +143,7 @@ weeks[4] =
 			weeks[4].load()
 		end
 
-		weeks.updateUI(dt)
+		weeks.updateUI(deltaTime)
 	end,
 
 	draw = function()

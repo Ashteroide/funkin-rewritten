@@ -4,7 +4,7 @@ This file is part of Friday Night Funkin' Rewritten by HTV04
 
 -- Automatically generated from blammed.json
 return {
-	speed = 1.5000000000000004,
+	speed = 1.5,
 	{
 		mustHitSection = true,
 		bpm = 95,

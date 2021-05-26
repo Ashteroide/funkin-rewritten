@@ -74,7 +74,7 @@ weeks[3] = {
 		end
 	end,
 	
-	update = function(dt)
+	update = function(deltaTime)
 		if gameOver then
 			if not graphics.isFading then
 				if input:pressed("confirm") then
@@ -94,12 +94,12 @@ weeks[3] = {
 				end
 			end
 			
-			boyfriend:update(dt)
+			boyfriend:update(deltaTime)
 			
 			return
 		end
 		
-		weeks.update(dt)
+		weeks.update(deltaTime)
 		
 		if musicThres ~= oldMusicThres and math.fmod(musicTime, 240000 / bpm) < 100 then
 			winColor = winColor + 1
@@ -113,7 +113,7 @@ weeks[3] = {
 			enemy:animate("idle", true)
 			enemyFrameTimer = 0
 		end
-		enemyFrameTimer = enemyFrameTimer + 24 * dt
+		enemyFrameTimer = enemyFrameTimer + 24 * deltaTime
 		
 		if health >= 80 then
 			if enemyIcon.anim.name == "pico" then
@@ -137,7 +137,7 @@ weeks[3] = {
 			weeks[3].load()
 		end
 		
-		weeks.updateUI(dt)
+		weeks.updateUI(deltaTime)
 	end,
 	
 	draw = function()

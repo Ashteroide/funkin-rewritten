@@ -221,7 +221,7 @@ weeks = {
 		end
 	end,
 	
-	update = function(dt)
+	update = function(deltaTime)
 		oldMusicThres = musicThres
 		
 		musicTime = musicTime + (love.timer.getTime() * 1000) - previousFrameTime
@@ -261,9 +261,9 @@ weeks = {
 			Timer.tween((60 / bpm) / 16, cam, {sizeX = camScale.x * 1.05, sizeY = camScale.y * 1.05}, "out-quad", function() Timer.tween((60 / bpm), cam, {sizeX = camScale.x, sizeY = camScale.y}, "out-quad") end)
 		end
 		
-		girlfriend:update(dt)
-		enemy:update(dt)
-		boyfriend:update(dt)
+		girlfriend:update(deltaTime)
+		enemy:update(deltaTime)
+		boyfriend:update(deltaTime)
 		
 		if girlfriendFrameTimer >= 29 then
 			girlfriend:animate("idle", true)
@@ -271,19 +271,19 @@ weeks = {
 			
 			girlfriendFrameTimer = 0
 		end
-		girlfriendFrameTimer = girlfriendFrameTimer + 14.4 / (60 / bpm) * dt
+		girlfriendFrameTimer = girlfriendFrameTimer + 14.4 / (60 / bpm) * deltaTime
 		
 		if boyfriendFrameTimer >= 13 then
 			boyfriend:animate("idle", true)
 			boyfriendFrameTimer = 0
 		end
-		boyfriendFrameTimer = boyfriendFrameTimer + 24 * dt
+		boyfriendFrameTimer = boyfriendFrameTimer + 24 * deltaTime
 	end,
 	
-	updateUI = function(dt)
+	updateUI = function(deltaTime)
 		for i = 1, 4 do
-			enemyArrows[i]:update(dt)
-			boyfriendArrows[i]:update(dt)
+			enemyArrows[i]:update(deltaTime)
+			boyfriendArrows[i]:update(deltaTime)
 		end
 		
 		for i = 1, 4 do

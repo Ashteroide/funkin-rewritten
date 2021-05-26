@@ -819,7 +819,7 @@ return {
 	},
 	{
 		mustHitSection = true,
-		bpm = 1201,
+		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},

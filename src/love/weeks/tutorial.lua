@@ -70,7 +70,7 @@ weeks[0] =
 		weeks.generateNotes(love.filesystem.load("charts/Tutorial/tutorial" .. songAppend .. ".lua")())
 	end,
 	
-	update = function(dt)
+	update = function(deltaTime)
 		if gameOver then
 			if not graphics.isFading then
 				if input:pressed("confirm") then
@@ -92,7 +92,7 @@ weeks[0] =
 				end
 			end
 			
-			boyfriend:update(dt)
+			boyfriend:update(deltaTime)
 			
 			return
 		end
@@ -136,8 +136,8 @@ weeks[0] =
 			Timer.tween((60 / bpm) / 16, cam, {sizeX = camScale.x * 1.05, sizeY = camScale.y * 1.05}, "out-quad", function() Timer.tween((60 / bpm), cam, {sizeX = camScale.x, sizeY = camScale.y}, "out-quad") end)
 		end
 		
-		enemy:update(dt)
-		boyfriend:update(dt)
+		enemy:update(deltaTime)
+		boyfriend:update(deltaTime)
 		
 		if enemyFrameTimer >= 29 then
 			enemy:animate("idle", true)
@@ -145,13 +145,13 @@ weeks[0] =
 			
 			enemyFrameTimer = 0
 		end
-		enemyFrameTimer = enemyFrameTimer + 14.4 / (60 / bpm) * dt
+		enemyFrameTimer = enemyFrameTimer + 14.4 / (60 / bpm) * deltaTime
 		
 		if boyfriendFrameTimer >= 13 then
 			boyfriend:animate("idle", true)
 			boyfriendFrameTimer = 0
 		end
-		boyfriendFrameTimer = boyfriendFrameTimer + 24 * dt
+		boyfriendFrameTimer = boyfriendFrameTimer + 24 * deltaTime
 		
 		if not graphics.isFading and not voices:isPlaying() then
 			storyMode = false
@@ -159,7 +159,7 @@ weeks[0] =
 			graphics.fadeOut(1, weeks[0].stop)
 		end
 		
-		weeks.updateUI(dt)
+		weeks.updateUI(deltaTime)
 	end,
 	
 	draw = function()

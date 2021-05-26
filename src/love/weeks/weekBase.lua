@@ -7,11 +7,11 @@ weeks[--[[ Week Number]]] =
         stageFront = Image(love.graphics.newImage("images/stageFront_Directory"));
         curtains = Image(love.graphics.newImage("images/curtains_Directory"));
 
-        stageFrpnt.x = 0;
-        stageFront.y = 0;
+        stageFront.x = 0;
+        stageFront.y = 400;
 
         curtains.x = 0;
-        curtains.y = 0;
+        curtains.y = -100;
 
         local songSprites = -- This is if the sprite changes per song
         {
@@ -21,17 +21,17 @@ weeks[--[[ Week Number]]] =
 
         enemy = love.filesystem.load(songSprites[songNum])();
 
-        boyfriend.x = 0;
-        boyfriend.y = 0;
+        boyfriend.x = 260;
+        boyfriend.y = 100;
 
-        girlfriend.x = 0;
-        girlfriend.y = 0;
+        girlfriend.x = 30;
+        girlfriend.y = -90;
 
         weeks[--[[ Week Number ]]].load();
     end,
 
     load function()
-        weeks.load(); -- Load new data once song is started
+        weeks.load(); -- Initialise load variables
 
         enemy.x = 0;
         enemy.y = 0;
@@ -58,7 +58,7 @@ weeks[--[[ Week Number]]] =
     end,
 
     initUI = function()
-        weeks.initUI(); -- Initialise Week Graphics/UI
+        weeks.initUI(); -- Initialise Week Graphics/UI variables
 
         local loadChart = -- Load Song Cahrt
         {
@@ -69,7 +69,7 @@ weeks[--[[ Week Number]]] =
         weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")()); -- Generate Song Notes
     end,
 
-    update = function(dt)
+    update = function(deltaTime)
         if gameOver then
             if not graphics.isFading then
                 if input:pressed("confirm") then
@@ -90,22 +90,22 @@ weeks[--[[ Week Number]]] =
                 end
             end
 
-            boyfriend.update(dt);
+            boyfriend.update(deltaTime);
             --[[
-                dt stands for Delta Time, the time it takes to switch frames
+                deltaTime stands for Delta Time, the time it takes to switch frames
             ]]-- 
 
             return
         end
 
-        weeks.update(dt);
+        weeks.update(deltaTime);
 
         if enemyFrameTimer >= 12 then
             enemy:animate("idle", true);
             enemyFrameTimer = 0;
         end
 
-        enemyFrameTimer = enemyFrameTimer + 24 * dt;
+        enemyFrameTimer = enemyFrameTimer + 24 * deltaTime;
 
         local enemyIcons = -- Used for winning and losing icons
         {
@@ -138,17 +138,17 @@ weeks[--[[ Week Number]]] =
 
         end
 
-        weeks.updateUI(dt);
+        weeks.updateUI(deltaTime);
     end,
 
     draw = function()
-        weeks.draw() -- Initialise draw function
+        weeks.draw() -- Initialise draw variables
 
         if not inGame or gameOver then
             return; -- return to previous call when not gameOver or inGame
         end
 
-
+        -- These are structured by what is furthest first, to what is closest last
         love.graphics.push(); -- Pushes the current transformation to the transformation stack
             love.graphics.scale(cam.sizeX, cam.sizeY);
 
@@ -158,16 +158,28 @@ weeks[--[[ Week Number]]] =
                 stageBack:draw(); -- Draw stageBack
                 stageFront:draw();
 
-                girlfriend.draw();
+                girlfriend.draw(); -- Draw girlfriend
             love.graphics.pop();
 
+            love.graphics.push();
+                love.graphics.translate(cam.x, cam.y);
+
+                enemy:draw();
+                boyfriend:draw();
+            love.graphics.pop();
+            
             love.graphics.push();
                 love.graphics.translate(cam.x * 1.1, cam.y * 1.1);
 
                 curtains:draw();
             love.graphics.pop();
-
         love.graphics.pop(); -- It returns the current transformation state to what it was before the last preceding push
+            
+        love.graphics.push();
+            love.graphics.scale(uiScale.x, uiScale.y);
+
+            weeks.drawUI();
+        love.graphics.pop();
     end,
 
     stop = function()
@@ -175,6 +187,6 @@ weeks[--[[ Week Number]]] =
         stageFront = nil;
         curtains = nil;
 
-        weeks.stop();
+        weeks.stop(); -- Initialise stop variables
     end
 }
