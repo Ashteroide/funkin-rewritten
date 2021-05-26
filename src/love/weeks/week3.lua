@@ -9,7 +9,8 @@ weeks[3] = {
 		cam.sizeX, cam.sizeY = 1, 1
 		camScale.x, camScale.y = 1, 1
 		
-		winColors = {
+		winColors =
+		{
 			{49, 162, 253}, -- Blue
 			{49, 253, 140}, -- Green
 			{251, 51, 245}, -- Magenta
@@ -45,14 +46,14 @@ weeks[3] = {
 		weeks.load()
 		
 		if songNum == 3 then
-			inst = love.audio.newSource("music/Blammed_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Blammed_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 3/Blammed_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 3/Blammed_Voices.ogg", "stream")
 		elseif songNum == 2 then
-			inst = love.audio.newSource("music/Philly_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Philly_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 3/Philly_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 3/Philly_Voices.ogg", "stream")
 		else
-			inst = love.audio.newSource("music/Pico_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Pico_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 3/Pico_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 3/Pico_Voices.ogg", "stream")
 		end
 		
 		weeks[3].initUI()
@@ -65,11 +66,11 @@ weeks[3] = {
 		weeks.initUI()
 		
 		if songNum == 3 then
-			weeks.generateNotes(love.filesystem.load("charts/Week 3/blammed" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 3/Blammed/blammed" .. songAppend .. ".lua")())
 		elseif songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/Week 3/philly" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 3/Philly/philly" .. songAppend .. ".lua")())
 		else
-			weeks.generateNotes(love.filesystem.load("charts/Week 3/pico" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 3/Pico/pico" .. songAppend .. ".lua")())
 		end
 	end,
 	

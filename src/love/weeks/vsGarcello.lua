@@ -10,7 +10,7 @@ weeks[4] =
 		stageFront.y = 0
 		curtains.y = 0
 
-		local songs =
+		local songSprites =
 		{
 			"sprites/vsGarcello/garcello_assets.lua",
 			"sprites/vsGarcello/garcello_tired.lua",
@@ -18,7 +18,7 @@ weeks[4] =
 			"sprites/vsGarcello/garcello_ghosty.lua"
 		}
 
-		enemy = love.filesystem.load(songs[songNum])()
+		enemy = love.filesystem.load(songSprites[songNum])()
 
 		girlfriend.x = 30
 		girlfriend.y = -90
@@ -37,18 +37,18 @@ weeks[4] =
 
 		local loadSong =
 		{
-			"music/vsGarcello/headache/Inst.ogg",
-			"music/vsGarcello/nerves/Inst.ogg",
-			"music/vsGarcello/release/Inst.ogg",
-			"music/vsGarcello/fading/Inst.ogg",
+			"music/vsGarcello/Headache/Inst.ogg",
+			"music/vsGarcello/Nerves/Inst.ogg",
+			"music/vsGarcello/Release/Inst.ogg",
+			"music/vsGarcello/Fading/Inst.ogg",
 		}
 
 		local loadVoice =
 		{
-			"music/vsGarcello/headache/Voices.ogg",
-			"music/vsGarcello/nerves/Voices.ogg",
-			"music/vsGarcello/release/Voices.ogg",
-			"music/vsGarcello/fading/Voices.ogg"
+			"music/vsGarcello/Headache/Voices.ogg",
+			"music/vsGarcello/Nerves/Voices.ogg",
+			"music/vsGarcello/Release/Voices.ogg",
+			"music/vsGarcello/Fading/Voices.ogg"
 		}
 
 		inst = love.audio.newSource(loadSong[songNum], "stream")
@@ -63,15 +63,15 @@ weeks[4] =
 	initUI = function()
 		weeks.initUI()
 
-		if songNum == 1 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/headache/headache" .. songAppend .. ".lua")())
-		elseif songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/nerves/nerves" .. songAppend .. ".lua")())
-		elseif songNum == 3 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/release/release" .. songAppend .. ".lua")())
-		elseif songNum == 4 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/fading/fading" .. songAppend .. ".lua")())
-		end
+		local loadChart =
+		{
+			"charts/vsGarcello/Headache/headache",
+			"charts/vsGarcello/Nerves/nerves",
+			"charts/vsGarcello/Release/release",
+			"charts/vsGarcello/Fading/fading"
+		}
+
+		weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")())
 	end,
 
 	update = function(dt)

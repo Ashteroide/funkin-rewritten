@@ -57,7 +57,7 @@ weeks[0] =
 		weeks.load()
 		
 		inst = nil
-		voices = love.audio.newSource("music/Tutorial_Inst.ogg", "stream")
+		voices = love.audio.newSource("music/Tutorial/Tutorial_Inst.ogg", "stream")
 		
 		weeks[0].initUI(songNum)
 		

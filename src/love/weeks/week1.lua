@@ -15,9 +15,14 @@ weeks[1] = {
 		
 		enemy = love.filesystem.load("sprites/daddy-dearest.lua")()
 		
-		girlfriend.x, girlfriend.y = 30, -90
-		enemy.x, enemy.y = -380, -110
-		boyfriend.x, boyfriend.y = 260, 100
+		girlfriend.x = 30
+		girlfriend.y = -90
+
+		enemy.x = -380
+		enemy.y = -110
+
+		boyfriend.x = 260
+		boyfriend.y = 100
 		
 		enemyIcon:animate("daddy dearest", false)
 		
@@ -26,17 +31,23 @@ weeks[1] = {
 	
 	load = function()
 		weeks.load()
-		
-		if songNum == 3 then
-			inst = love.audio.newSource("music/Week 1/Dadbattle_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Week 1/Dadbattle_Voices.ogg", "stream")
-		elseif songNum == 2 then
-			inst = love.audio.newSource("music/Week 1/Fresh_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Week 1/Fresh_Voices.ogg", "stream")
-		else
-			inst = love.audio.newSource("music/Week 1/Bopeebo_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Week 1/Bopeebo_Voices.ogg", "stream")
-		end
+
+		local loadSong =
+		{
+			"music/Week 1/Bopeebo/Inst.ogg",
+			"music/Week 1/Fresh/Inst.ogg",
+			"music/Week 1/Dadbattle/Inst.ogg"
+		}
+
+		local loadVoice =
+		{
+			"music/Week 1/Bopeebo/Voices.ogg",
+			"music/Week 1/Fresh/Voices.ogg",
+			"music/Week 1/Dadbattle/Voices.ogg"
+		}
+
+		inst = love.audio.newSource(loadSong[songNum], "stream")
+		voices = love.audio.newSource(loadVoice[songNum], "stream")
 		
 		weeks[1].initUI()
 		
@@ -46,14 +57,15 @@ weeks[1] = {
 	
 	initUI = function()
 		weeks.initUI()
-		
-		if songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/Week 1/Fresh/fresh" .. songAppend .. ".lua")())
-		elseif songNum == 3 then
-			weeks.generateNotes(love.filesystem.load("charts/Week 1/Dadbattle/dadbattle" .. songAppend .. ".lua")())
-		else
-			weeks.generateNotes(love.filesystem.load("charts/Week 1/Bopeebo/bopeebo" .. songAppend .. ".lua")())
-		end
+
+		local loadChart =
+		{
+			"charts/Week 1/Bopeebo/bopeebo",
+			"charts/Week 1/Fresh/fresh",
+			"charts/Week 1/Dadbattle/dadbattle"
+		}
+
+		weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")())
 	end,
 	
 	update = function(dt)
@@ -93,16 +105,25 @@ weeks[1] = {
 			boyfriend:animate("hey", false)
 			boyfriendFrameTimer = 0
 		end
+
+		local enemyIcons =
+		{
+			"daddy dearest",
+			"daddy dearest",
+
+			"daddy dearest losing",
+			"daddy dearest losing"
+		}
 		
+		local icon = enemyIcons[songNum]
+
 		if health >= 80 then
-			if enemyIcon.anim.name == "daddy dearest" then
-				enemyIcon:animate("daddy dearest losing", false)
-			end
+			icon = enemyIcons[songNum + 1]
 		else
-			if enemyIcon.anim.name == "daddy dearest losing" then
-				enemyIcon:animate("daddy dearest", false)
-			end
+			icon = enemyIcons[songNum]
 		end
+
+		enemyIcon:animate(icon, false)
 		
 		if not graphics.isFading and not voices:isPlaying() then
 			if storyMode and songNum < 3 then

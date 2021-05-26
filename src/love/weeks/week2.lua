@@ -9,7 +9,8 @@ weeks[2] = {
 		cam.sizeX, cam.sizeY = 1.1, 1.1
 		camScale.x, camScale.y = 1.1, 1.1
 		
-		sounds["thunder"] = {
+		sounds["thunder"] =
+		{
 			love.audio.newSource("sounds/thunder_1.ogg", "static"),
 			love.audio.newSource("sounds/thunder_2.ogg", "static")
 		}
@@ -28,14 +29,21 @@ weeks[2] = {
 	
 	load = function()
 		weeks.load()
-		
-		if songNum == 2 then
-			inst = love.audio.newSource("music/South_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/South_Voices.ogg", "stream")
-		else
-			inst = love.audio.newSource("music/Spookeez_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Spookeez_Voices.ogg", "stream")
-		end
+
+		local loadSong =
+		{
+			"music/Week 2/Spookeez/Inst.ogg",
+			"music/Week 2/South/Inst.ogg"
+		}
+
+		local loadVoice =
+		{
+			"music/Week 2/Spookeez/Voices.ogg",
+			"music/Week 2/South/Voices.ogg",
+		}
+
+		inst = love.audio.newSource(loadSong[songNum], "stream")
+		voices = love.audio.newSource(loadVoice[songNum], "stream")
 		
 		weeks[2].initUI()
 		
@@ -47,9 +55,9 @@ weeks[2] = {
 		weeks.initUI()
 		
 		if songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/Week 2/south" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 2/South/south" .. songAppend .. ".lua")())
 		else
-			weeks.generateNotes(love.filesystem.load("charts/Week 2/spookeez" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/Week 2/Spookeez/spookeez" .. songAppend .. ".lua")())
 		end
 	end,
 	
@@ -102,15 +110,23 @@ weeks[2] = {
 		end
 		enemyFrameTimer = enemyFrameTimer + 24 * dt
 		
+		local enemyIcons =
+		{
+			"skid and pump",
+			"skid and pump",
+
+			"skid and pump losing",
+			"skid and pump losing"
+		}
+		local icon = enemyIcons[songNum]
+
 		if health >= 80 then
-			if enemyIcon.anim.name == "skid and pump" then
-				enemyIcon:animate("skid and pump losing", false)
-			end
+			icon = enemyIcons[songNum + 1]
 		else
-			if enemyIcon.anim.name == "skid and pump losing" then
-				enemyIcon:animate("skid and pump", false)
-			end
+			icon = enemyIcons[songNum]
 		end
+
+		enemyIcon:animate(icon, false)
 		
 		if not graphics.isFading and not voices:isPlaying() then
 			if storyMode and songNum < 2 then
