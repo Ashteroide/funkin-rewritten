@@ -71,7 +71,7 @@ weeks[4] =
 			"charts/vsGarcello/Fading/fading"
 		}
 
-		weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")())
+		weeks.generateNotes(love.filesystem.load(loadChart[songNum] .. songAppend .. ".lua")());
 	end,
 
 	update = function(dt)

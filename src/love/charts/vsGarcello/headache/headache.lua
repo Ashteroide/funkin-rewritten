@@ -1,5 +1,6 @@
 -- Automatically generated from headache.json
 return {
+
 	speed = 1.4,
 	{
 		mustHitSection = false,
