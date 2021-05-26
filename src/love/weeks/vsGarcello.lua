@@ -3,9 +3,9 @@ weeks[4] =
 	init = function()
 		weeks.init()
 
-		stageBack = Image(love.graphics.newImage("images/vsGarcellos/garStagebg.png"))
-		stageFront = Image(love.graphics.newImage("images/vsGarcellos/garStage.png"))
-		curtains = Image(love.graphics.newImage("images/vsGarcellos/garStage_Smoke.png"))
+		stageBack = Image(love.graphics.newImage("images/vsGarcello/garStagebg.png"))
+		stageFront = Image(love.graphics.newImage("images/vsGarcello/garStage.png"))
+		curtains = Image(love.graphics.newImage("images/vsGarcello/garStage_Smoke.png"))
 
 		stageFront.y = 0
 		curtains.y = 0
@@ -37,18 +37,18 @@ weeks[4] =
 
 		local loadSong =
 		{
-			"music/vsGarcellos/headache/Inst.ogg",
-			"music/vsGarcellos/nerves/Inst.ogg",
-			"music/vsGarcellos/release/Inst.ogg",
-			"music/vsGarcellos/fading/Inst.ogg",
+			"music/vsGarcello/headache/Inst.ogg",
+			"music/vsGarcello/nerves/Inst.ogg",
+			"music/vsGarcello/release/Inst.ogg",
+			"music/vsGarcello/fading/Inst.ogg",
 		}
 
 		local loadVoice =
 		{
-			"music/vsGarcellos/headache/Voices.ogg",
-			"music/vsGarcellos/nerves/Voices.ogg",
-			"music/vsGarcellos/release/Voices.ogg",
-			"music/vsGarcellos/fading/Voices.ogg"
+			"music/vsGarcello/headache/Voices.ogg",
+			"music/vsGarcello/nerves/Voices.ogg",
+			"music/vsGarcello/release/Voices.ogg",
+			"music/vsGarcello/fading/Voices.ogg"
 		}
 
 		inst = love.audio.newSource(loadSong[songNum], "stream")
@@ -64,13 +64,13 @@ weeks[4] =
 		weeks.initUI()
 
 		if songNum == 1 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcellos/headache/headache" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/headache/headache" .. songAppend .. ".lua")())
 		elseif songNum == 2 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcellos/nerves/nerves" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/nerves/nerves" .. songAppend .. ".lua")())
 		elseif songNum == 3 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcellos/release/release" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/release/release" .. songAppend .. ".lua")())
 		elseif songNum == 4 then
-			weeks.generateNotes(love.filesystem.load("charts/vsGarcellos/fading/fading" .. songAppend .. ".lua")())
+			weeks.generateNotes(love.filesystem.load("charts/vsGarcello/fading/fading" .. songAppend .. ".lua")())
 		end
 	end,
 
@@ -110,15 +110,15 @@ weeks[4] =
 
 		local enemyIcons =
 		{
-			"garcellos",
-			"garcellos tired",
-			"garcellos ghosty",
-			"garcellos ghosty",
+			"garcello",
+			"garcello tired",
+			"garcello ghosty",
+			"garcello ghosty",
 
-			"garcellos losing",
-			"garcellos tired losing",
-			"garcellos ghosty losing",
-			"garcellos ghosty losing"
+			"garcello losing",
+			"garcello tired losing",
+			"garcello ghosty losing",
+			"garcello ghosty losing"
 		}
 
 		local icon = enemyIcons[songNum]

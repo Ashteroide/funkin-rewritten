@@ -1,7 +1,7 @@
 	-- Automatically generated from garcello_assets.xml
 
 return Sprite (
-	love.graphics.newImage("images/vsGarcellos/garcello_assets.png"),
+	love.graphics.newImage("images/vsGarcello/garcello_assets.png"),
 	{
 		{x = 5624, y = 2812, width = 700, height = 700, offsetX = 0, offsetY = -80, offsetWidth = 800, offsetHeight = 800}, -- 1: garcello Sing Note DOWN0000
 		{x = 4921, y = 2812, width = 700, height = 700, offsetX = 0, offsetY = -80, offsetWidth = 800, offsetHeight = 800}, -- 2: garcello Sing Note DOWN0001

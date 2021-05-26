@@ -22,7 +22,7 @@ function love.load()
 	require "weeks.week1"
 	require "weeks.week2"
 	require "weeks.week3"
-	require "weeks.vsGarcellos"
+	require "weeks.vsGarcello"
 	
 	-- Create, read, and apply settings
 	settingsStr = [[

@@ -29,12 +29,12 @@ return Sprite (
 		{x = 150, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 22: Boyfriend (Pixel)
 		{x = 300, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 23: Senpai
 		{x = 450, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 24: Spirit
-		{x = 600, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 25: Garcellos
-		{x = 750, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 26: Garcellos losing
-		{x = 900, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 27: Garcellos Tired
-		{x = 1050, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 28: Garcellos Tired Losing
-		{x = 1200, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 29: Garcellos Ghosty
-		{x = 1350, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0} -- 30: Garcellos Ghosty Losing
+		{x = 600, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 25: Garcello
+		{x = 750, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 26: Garcello losing
+		{x = 900, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 27: Garcello Tired
+		{x = 1050, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 28: Garcello Tired Losing
+		{x = 1200, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0}, -- 29: Garcello Ghosty
+		{x = 1350, y = 300, width = 150, height = 150, offsetX = 0, offsetY = 0, offsetWidth = 0, offsetHeight = 0} -- 30: Garcello Ghosty Losing
 	},
 	{
 		["boyfriend"] = {start = 1, stop = 1, speed = 0, offsetX = 0, offsetY = 0},
@@ -71,14 +71,14 @@ return Sprite (
 		["senpai"] = {start = 23, stop = 23, speed = 0, offsetX = 0, offsetY = 0},
 		["spirit"] = {start = 24, stop = 24, speed = 0, offsetX = 0, offsetY = 0},
 
-		["garcellos"] = {start = 25, stop = 25, speed = 0, offsetX = 0, offsetY = 0},
-		["garcellos losing"] = {start = 26, stop = 26, speed = 0, offsetX = 0, offsetY = 0},
+		["garcello"] = {start = 25, stop = 25, speed = 0, offsetX = 0, offsetY = 0},
+		["garcello losing"] = {start = 26, stop = 26, speed = 0, offsetX = 0, offsetY = 0},
 
-		["garcellos tired"] = {start = 27, stop = 27, speed = 0, offsetX = 0, offsetY = 0},
-		["garcellos tired losing"] = {start = 28, stop = 28, speed = 0, offsetX = 0, offsetY = 0},
+		["garcello tired"] = {start = 27, stop = 27, speed = 0, offsetX = 0, offsetY = 0},
+		["garcello tired losing"] = {start = 28, stop = 28, speed = 0, offsetX = 0, offsetY = 0},
 
-		["garcellos ghosty"] = {start = 29, stop = 29, speed = 0, offsetX = 0, offsetY = 0},
-		["garcellos ghosty losing"] = {start = 30, stop = 30, speed = 0, offsetX = 0, offsetY = 0}
+		["garcello ghosty"] = {start = 29, stop = 29, speed = 0, offsetX = 0, offsetY = 0},
+		["garcello ghosty losing"] = {start = 30, stop = 30, speed = 0, offsetX = 0, offsetY = 0}
 
 	},
 	"boyfriend",
