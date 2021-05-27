@@ -4,7 +4,7 @@ This file is part of Friday Night Funkin' Rewritten by HTV04
 
 -- Automatically generated from spookeez.json
 return {
-	speed = 1.7000000000000006,
+	speed = 1.7,
 	{
 		mustHitSection = true,
 		sectionNotes = {}

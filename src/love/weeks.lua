@@ -787,6 +787,7 @@ weeks = {
 			end
 		end
 		
+		-- Health Bar
 		graphics.setColor(1, 0, 0)
 			love.graphics.rectangle("fill", -500, 350, 1000, 30)
 		graphics.setColor(0, 1, 0)
@@ -800,6 +801,7 @@ weeks = {
 		boyfriendIcon:draw()
 		enemyIcon:draw()
 		
+		-- Print Score
 		love.graphics.print("Score: " .. score, 300, 400)
 	end,
 	

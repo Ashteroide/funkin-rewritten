@@ -1,23 +1,28 @@
 -- Automatically generated from headache-hard.json
 return {
-	speed = 1.7,
+	speed = 1.70000000000002,
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -30,6 +35,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -42,6 +48,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -54,6 +61,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -66,6 +74,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -78,6 +87,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -92,6 +102,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -107,6 +118,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -124,6 +136,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -137,6 +150,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -151,6 +165,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -164,6 +179,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -178,6 +194,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -191,6 +208,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -206,6 +224,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -221,6 +240,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -243,6 +263,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -256,6 +277,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -270,6 +292,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -283,6 +306,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -297,6 +321,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -310,6 +335,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -324,6 +350,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -337,6 +364,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -351,6 +379,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -365,6 +394,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -380,6 +410,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -394,6 +425,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -409,6 +441,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -421,6 +454,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -438,6 +472,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -453,6 +488,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -473,6 +509,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -487,6 +524,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -502,6 +540,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -515,6 +554,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -529,6 +569,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -542,6 +583,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -558,6 +600,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -574,6 +617,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -593,6 +637,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -610,6 +655,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -627,6 +673,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -643,6 +690,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -659,6 +707,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -675,6 +724,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -691,6 +741,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
         sectionNotes =
 		{
@@ -719,6 +770,7 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
         sectionNotes =
 		{
@@ -737,225 +789,267 @@ return {
 		}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 180,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
+		mustHitSection = true,
+		bpm = 1201,
+		altAnim = false,
+		sectionNotes = {}
+	},
+	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
+		bpm = 120,
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,
 		sectionNotes = {}
 	},
 	{
-		mustHitSection = true,
 		bpm = 120,
-		altAnim = false,
-		sectionNotes = {}
-	},
-	{
 		mustHitSection = true,
 		bpm = 120,
 		altAnim = false,

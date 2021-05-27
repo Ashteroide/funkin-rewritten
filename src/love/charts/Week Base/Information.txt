@@ -1,0 +1,2 @@
+* Each folder must have a Capital Letter
+* Each folder must contain the song charts, with their difficulties (e.g. songName.lua , songName-easy.lua , songName-hard.lua )

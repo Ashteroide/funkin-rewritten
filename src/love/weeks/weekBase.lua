@@ -1,11 +1,11 @@
-weeks[--[[ Week Number]]] =
+weeks[--[[ Week Number ]]] =
 {
     init = function()
         week.init(); -- Initiliase new variables
 
-        stageBack = Image(love.graphics.newImage("images/stageBack_Directory"));
-        stageFront = Image(love.graphics.newImage("images/stageFront_Directory"));
-        curtains = Image(love.graphics.newImage("images/curtains_Directory"));
+        stageBack = Image(love.graphics.newImage("images/Week #/stageBack_Directory"));
+        stageFront = Image(love.graphics.newImage("images/Week #/stageFront_Directory"));
+        curtains = Image(love.graphics.newImage("images/Week #/curtains_Directory"));
 
         stageFront.x = 0;
         stageFront.y = 400;
@@ -15,8 +15,8 @@ weeks[--[[ Week Number]]] =
 
         local songSprites = -- This is if the sprite changes per song
         {
-            "sprites/song1_Sprite.luad",
-            "sprites/song2_Sprite.lua"
+            "sprites/Week #/song1_Sprite.lua",
+            "sprites/Week #/song2_Sprite.lua"
         }
 
         enemy = love.filesystem.load(songSprites[songNum])();

@@ -19,11 +19,11 @@ weeks[3] = {
 		}
 		winColor = 1
 		
-		sky = Image(love.graphics.newImage("images/sky.png"))
-		city = Image(love.graphics.newImage("images/city.png"))
-		cityWindows = Image(love.graphics.newImage("images/city-windows.png"))
-		behindTrain = Image(love.graphics.newImage("images/behindTrain.png"))
-		street = Image(love.graphics.newImage("images/street.png"))
+		sky = Image(love.graphics.newImage("images/Week 3/sky.png"))
+		city = Image(love.graphics.newImage("images/Week 3/city.png"))
+		cityWindows = Image(love.graphics.newImage("images/Week 3/city-windows.png"))
+		behindTrain = Image(love.graphics.newImage("images/Week 3/behindTrain.png"))
+		street = Image(love.graphics.newImage("images/Week 3/street.png"))
 		
 		behindTrain.y = -100
 		behindTrain.sizeX, behindTrain.sizeY = 1.25, 1.25
@@ -46,14 +46,14 @@ weeks[3] = {
 		weeks.load()
 		
 		if songNum == 3 then
-			inst = love.audio.newSource("music/Week 3/Blammed_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Week 3/Blammed_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 3/Blammed/Blammed_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 3/Blammed/Blammed_Voices.ogg", "stream")
 		elseif songNum == 2 then
-			inst = love.audio.newSource("music/Week 3/Philly_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Week 3/Philly_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 3/Philly/Philly_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 3/Philly/Philly_Voices.ogg", "stream")
 		else
-			inst = love.audio.newSource("music/Week 3/Pico_Inst.ogg", "stream")
-			voices = love.audio.newSource("music/Week 3/Pico_Voices.ogg", "stream")
+			inst = love.audio.newSource("music/Week 3/Pico/Pico_Inst.ogg", "stream")
+			voices = love.audio.newSource("music/Week 3/Pico/Pico_Voices.ogg", "stream")
 		end
 		
 		weeks[3].initUI()

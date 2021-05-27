@@ -4,7 +4,7 @@ This file is part of Friday Night Funkin' Rewritten by HTV04
 
 -- Automatically generated from south-hard.json
 return {
-	speed = 2.200000000000001,
+	speed = 2.2,
 	{
 		mustHitSection = true,
 		sectionNotes = {}

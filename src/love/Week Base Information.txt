@@ -1,0 +1,3 @@
+* Week Base is the general format for when creating mods
+* These can be used to efficiently and cleanly make new songs, most folder have a `Week Base` folder
+* main.lua has `require` statements, adding a new week requires you to add another `require weeks.weekName` ( weekName must be the week.lua file name )

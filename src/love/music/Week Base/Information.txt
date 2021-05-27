@@ -1,0 +1,2 @@
+* The Folders must start with a Capital Letter, corresponding to the song name
+* Each folder must contain the Inst.ogg and Voices.ogg for the song

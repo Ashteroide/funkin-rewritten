@@ -17,38 +17,40 @@ function love.load()
 	require "menu"
 	require "weeks"
 	
-	-- Load week data
+	-- Load week data -- Add new weeks
 	require "weeks.tutorial"
 	require "weeks.week1"
 	require "weeks.week2"
 	require "weeks.week3"
 	require "weeks.vsGarcello"
+	-- require "weeks.weekBase" ( Used to add new songs )
 	
 	-- Create, read, and apply settings
-	settingsStr = [[
-; Friday Night Funkin' Rewritten Settings
+	settingsStr =
+	[[
+	; Friday Night Funkin' Rewritten Settings
 
-[Video]
-; Screen/window width and height (you should change this to your device's screen resolution if you are using the "exclusive" fullscreen type).
-width=1280
-height=720
+	[Video]
+	; Screen/window width and height (you should change this to your device's screen resolution if you are using the "exclusive" fullscreen type).
+	width=1280
+	height=720
 
-; Fullscreen settings. If you don't want Vsync (60 FPS cap), set "fullscreenType" to "exclusive", and set "vsync" is set to "0".
-fullscreen=false
-fullscreenType=desktop
-vsync=1
+	; Fullscreen settings. If you don't want Vsync (60 FPS cap), set "fullscreenType" to "exclusive", and set "vsync" is set to "0".
+	fullscreen=false
+	fullscreenType=desktop
+	vsync=1
 
-[Game]
-; "Kade Input" disables anti-spam, but counts "Shit" inputs as misses.
-kadeInput=false
+	[Game]
+	; "Kade Input" disables anti-spam, but counts "Shit" inputs as misses.
+	kadeInput=false
 
-[Advanced]
-showFps=false
+	[Advanced]
+	showFps=false
 
-; These variables are read by the game for internal purposes, don't edit these unless you want to risk losing your current settings.
-[Data]
-settingsVer=1
-]]
+	; These variables are read by the game for internal purposes, don't edit these unless you want to risk losing your current settings.
+	[Data]
+	settingsVer=1
+	]]
 	
 	if love.filesystem.getInfo("settings.ini") then
 		settingsIni = ini.load("settings.ini")

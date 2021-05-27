@@ -4,7 +4,7 @@ This file is part of Friday Night Funkin' Rewritten by HTV04
 
 -- Automatically generated from pico.json
 return {
-	speed = 1.4000000000000004,
+	speed = 1.4,
 	{
 		mustHitSection = true,
 		bpm = 95,

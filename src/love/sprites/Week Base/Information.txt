@@ -1,0 +1,3 @@
+* Must contain the sprites for characters ( .lua files )
+* Only add boyfriend if his sprites are different
+* `tools/funkin-json.py` can help convert .json charts to .lua

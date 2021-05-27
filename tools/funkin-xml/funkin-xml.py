@@ -43,5 +43,5 @@ for SubTexture in sheetxml.findall('SubTexture'):
 lua = lua[:len(lua) - (len(str(c)) + len(name) + 9)] + '} -- ' + str(c) + ': ' + name + '\n'
 lua += '\t},\n'
 
-with open('output.txt', 'w') as f:
+with open( xmlname - '.xml' + '.lua', 'w') as f:
     f.write(lua)

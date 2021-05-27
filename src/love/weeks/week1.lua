@@ -6,9 +6,9 @@ weeks[1] = {
 	init = function()
 		weeks.init()
 		
-		stageBack = Image(love.graphics.newImage("images/stageback.png"))
-		stageFront = Image(love.graphics.newImage("images/stagefront.png"))
-		curtains = Image(love.graphics.newImage("images/stagecurtains.png"))
+		stageBack = Image(love.graphics.newImage("images/Week 1/stageback.png"))
+		stageFront = Image(love.graphics.newImage("images/Week 1/stagefront.png"))
+		curtains = Image(love.graphics.newImage("images/Week 1/stagecurtains.png"))
 		
 		stageFront.y = 400
 		curtains.y = -100
